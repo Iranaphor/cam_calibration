@@ -2,7 +2,7 @@ from setuptools import setup
 from glob import glob
 import os
 
-package_name = 'ros2_template'
+package_name = 'cam_calibration'
 pkg = package_name
 
 setup(
