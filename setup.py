@@ -11,7 +11,9 @@ setup(
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages', [f'resource/{pkg}']),
-        ('share/{pkg}', ['package.xml']),
+        (f'share/{pkg}/config', [f for f in glob(os.path.join('config', '*')) if os.path.isfile(f)]),
+        (f'share/{pkg}/config/MicrosoftL2LifeCamHD3000', glob(os.path.join('config', 'MicrosoftL2LifeCamHD3000', '*'))),
+        (f'share/{pkg}', ['package.xml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

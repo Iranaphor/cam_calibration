@@ -102,6 +102,7 @@ print('#####################################')
 print("camera_matrix:")
 listmatrix = np.asarray(matrix).tolist()
 print(f'  cols: {len(listmatrix[0])}')
+print('  data:')
 for m in listmatrix:
     for p in m:
         print(f'  - {p}')
@@ -112,6 +113,7 @@ print(f'  rows: {len(listmatrix)}')
 print("distortion_coefficients:")
 listdist = np.asarray(distortion).tolist()
 print(f'  cols: {len(listdist[0])}')
+print('  data:')
 for m in listdist:
     for p in m:
         print(f'  - {p}')
